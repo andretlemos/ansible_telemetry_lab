@@ -1,0 +1,24 @@
+---
+- name: Using Ansible Tags 
+  hosts: arista_ceos
+  gather_facts: false
+  tasks:
+    - name: Print OSPF
+      ansible.builtin.debug:
+        msg: "Router {{ inventory_hostname}} will Run OSPF"
+      tags:
+        - ospf
+        - routing
+
+    - name: Print BGP
+      ansible.builtin.debug:
+        msg: "Router {{ inventory_hostname}} will Run BGP"
+      tags:
+        - bgp
+        - routing
+
+    - name: Print NTP
+      ansible.builtin.debug:
+        msg: "Router {{ inventory_hostname}} will Run NTP"
+      tags:
+        - ntp

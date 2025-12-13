@@ -1,0 +1,10 @@
+# Ignorar repositórios embutidos do clab
+clab/**/.config-repo-ar/
+
+# Ignorar configs geradas automaticamente
+clab/clab-lab/**/config/
+clab/clab-lab/**/flash/
+
+# Ignorar arquivos temporários
+*.log
+*.tmp

@@ -1,0 +1,61 @@
+name: lab
+prefix: "" # Empty string to not add a prefix to the containers
+
+mgmt:
+  network: network-cookbook-lab
+  ipv4-subnet: 192.168.100.0/24
+
+topology:
+  kinds:
+    arista_ceos:
+      image: ghcr.io/autonetops/ceos
+    nokia_srlinux:
+      image: ghcr.io/nokia/srlinux
+    cisco_iol:
+      image: ghcr.io/autonetops/autonetops_labs/cisco_iol
+    linux:
+      image: ghcr.io/hellt/network-multitool
+
+  nodes:
+    ceos-01:
+      kind: arista_ceos
+      mgmt-ipv4: 192.168.100.11
+    ceos-02:
+      kind: arista_ceos
+      mgmt-ipv4: 192.168.100.12
+    ceos-03:
+      kind: arista_ceos
+      mgmt-ipv4: 192.168.100.13
+    cisco-01:
+      kind: cisco_iol
+      mgmt-ipv4: 192.168.100.21
+    cisco-02:
+      kind: cisco_iol
+      mgmt-ipv4: 192.168.100.22
+    srl-01:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.31
+    srl-02:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.32
+    srl-03:
+      kind: nokia_srlinux
+      mgmt-ipv4: 192.168.100.33
+    client1:
+      kind: linux
+    client2:
+      kind: linux
+
+  links:
+    # Arista connections
+    - endpoints: ["ceos-01:eth1", "ceos-02:eth1"]
+    - endpoints: ["ceos-01:eth2", "ceos-03:eth1"]   
+    # SR Linux connections
+    - endpoints: ["srl-01:e1-1", "srl-02:e1-1"]
+    - endpoints: ["srl-01:e1-2", "srl-03:e1-1"]
+    # Cisco IOL connections
+    - endpoints: ["cisco-01:eth1", "cisco-02:eth1"]
+    - endpoints: ["cisco-01:eth2", "ceos-01:eth3"]
+    - endpoints: ["cisco-02:eth2", "ceos-02:eth3"]
+    - endpoints: ["cisco-01:eth3", "srl-01:e1-3"]
+    - endpoints: ["cisco-02:eth3", "srl-02:e1-3"]

@@ -1,0 +1,51 @@
+---
+ceos-01:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 192.168.100.11
+ceos-02:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 192.168.100.12
+ceos-03:
+    username: admin
+    password: admin
+    platform: arista_ceos
+    hostname: 192.168.100.13
+cisco-01:
+    username: admin
+    password: admin
+    platform: cisco_iol
+    hostname: 192.168.100.21
+cisco-02:
+    username: admin
+    password: admin
+    platform: cisco_iol
+    hostname: 192.168.100.22
+client1:
+    username: 
+    password: 
+    platform: linux
+    hostname: 192.168.100.3
+client2:
+    username: 
+    password: 
+    platform: linux
+    hostname: 192.168.100.2
+srl-01:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 192.168.100.31
+srl-02:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 192.168.100.32
+srl-03:
+    username: admin
+    password: NokiaSrl1!
+    platform: nokia_srlinux
+    hostname: 192.168.100.33

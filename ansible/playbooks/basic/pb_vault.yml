@@ -1,0 +1,12 @@
+---
+- name: Using Ansible Vault 
+  hosts: all 
+  gather_facts: false
+  vars_files:
+    - secrets 
+  tasks:
+    - name: Display SECURE DATA
+      ansible.builtin.debug:
+        msg: "OSPF Password for Router {{ inventory_hostname }} is {{ ospf_password }}"
+      when: inventory_hostname == "ceos-01" 
+      

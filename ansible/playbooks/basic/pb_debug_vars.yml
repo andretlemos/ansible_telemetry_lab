@@ -1,0 +1,12 @@
+---
+- name: Initial Playbook 
+  hosts: all
+  gather_facts: false 
+  tasks:
+    - name: Display Hostname 
+      ansible.builtin.debug:
+        msg: "Hostanme is {{ inventory_hostname }}"
+    
+    - name: Display the NTP variables
+      ansible.builtin.debug:
+        msg: "{{ inventory_hostname }} NTP Servers: {{ ntp }}"

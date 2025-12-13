@@ -1,0 +1,39 @@
+---
+
+linux:
+  hosts:
+    client1:
+      ansible_host: 192.168.100.1 
+    client2:
+      ansible_host: 192.168.100.2
+    
+arista_ceos:
+  hosts:
+    ceos-01:
+      ansible_host: 192.168.100.11 
+    ceos-02:
+      ansible_host: 192.168.100.12 
+    ceos-03:
+      ansible_host: 192.168.100.13
+
+cisco_iol:
+  hosts:
+    cisco-01:
+      ansible_host: 192.168.100.21 
+    cisco-02:
+      ansible_host: 192.168.100.22
+
+nokia_srlinux:
+  hosts:
+    srl-01:
+      ansible_host: 192.168.100.31 
+    srl-02:
+      ansible_host: 192.168.100.32  
+    srl-03:
+      ansible_host: 192.168.100.33
+
+network_equipment: 
+  children:
+    arista_ceos:
+    cisco_iol:
+    nokia_srlinux:
