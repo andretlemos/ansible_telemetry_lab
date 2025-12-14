@@ -6,14 +6,14 @@
       "prefix": "",
       "mgmt": {
         "network": "network-cookbook-lab",
-        "bridge": "br-d7db08a1dcea",
+        "bridge": "br-e8656297323d",
         "ipv4-subnet": "192.168.100.0/24",
         "ipv4-gw": "192.168.100.1",
         "external-access": true
       }
     }
   },
-  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6jCsLMZWmSVOPGyJw67be2ICjYQye8TNoYsNto2PpxT8HzAhg1ocJ29c9qcp8opW51bBOlADh+Wi5Cuej229LsySERLRNxMjbjG2+97U8eASIC8OeU0MCda9/hTBxXrxANimh1gDTmt4v99rbfRC1rhhw+JLHc4uZfFb7hDg3by2ShIBGcI4YxjteoaCC2ZDc0wcsh3EUt96/7OT3OdkJikVy9kviXSms/FCMYXy7ztQ9LnJ0WVthwRSlE6cgdKNPuPZojGCoQi7k0rZuZYYjXuq4EkCHT+RboSs12A6aeoOTkC07yW80/nb8639TcyNkHGHc3dPEaZIzBiHT3j86ijmky614zQYbIWeTRbPVM+BRV7XaF/5JS8WOilLwyYDf0rZAmRC5QGVSGFfOEs7rREYVkHWpm9yECarM2gF5A3R5gIiMWKtbUQ/Uxn7nwS1DQKAUr5vPsFqdOhkCCnxCWhwXh3RUNGkoGD0jY4S/iIaQUh7zN09OgVfYdGbtPsU="],
+  "ssh-pub-keys": ["ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQDGedoLmED899MpecRfjgzTTwUCR/GMpUSdttYghNHA7gsl7UgGaN+ioMnprqZvMQazunBHtulRG9sVoDc1fGhGCmxRVcCbhcN1LfAIF53lk6bWC9JT4a4fFJTFo/SwRMpxQkcYwpMwNDZYcvZs7FfZCGk6SVDivoYWZEL/pEcAqbZ95oFdA984vkUyG99Fpyib9AcoNL86Zp91WLpNl3x7QFzCPbsa1v6g9Q8LXDa4cDLfVYQ8jSeCRrCaqh/CHGZw+zybRK6CgRrmMUS6lOXGSX7gwTaaYQdC2zk/BjwooIx5sSdA8Gvb+uG+Blr8taC6oWIToWHsegIYSeZfVAVv","ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC6jCsLMZWmSVOPGyJw67be2ICjYQye8TNoYsNto2PpxT8HzAhg1ocJ29c9qcp8opW51bBOlADh+Wi5Cuej229LsySERLRNxMjbjG2+97U8eASIC8OeU0MCda9/hTBxXrxANimh1gDTmt4v99rbfRC1rhhw+JLHc4uZfFb7hDg3by2ShIBGcI4YxjteoaCC2ZDc0wcsh3EUt96/7OT3OdkJikVy9kviXSms/FCMYXy7ztQ9LnJ0WVthwRSlE6cgdKNPuPZojGCoQi7k0rZuZYYjXuq4EkCHT+RboSs12A6aeoOTkC07yW80/nb8639TcyNkHGHc3dPEaZIzBiHT3j86ijmky614zQYbIWeTRbPVM+BRV7XaF/5JS8WOilLwyYDf0rZAmRC5QGVSGFfOEs7rREYVkHWpm9yECarM2gF5A3R5gIiMWKtbUQ/Uxn7nwS1DQKAUr5vPsFqdOhkCCnxCWhwXh3RUNGkoGD0jY4S/iIaQUh7zN09OgVfYdGbtPsU="],
   "nodes": {
     "ceos-01": {
       "index": "0",
@@ -30,9 +30,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:5b:95:b4",
+      "mac-address": "00:1c:73:a5:df:ed",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/ceos-01",
@@ -61,9 +61,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:e3:e1:2a",
+      "mac-address": "00:1c:73:17:b0:11",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/ceos-02",
@@ -92,9 +92,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "00:1c:73:99:cd:8b",
+      "mac-address": "00:1c:73:bc:a9:3d",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "arista_ceos",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/ceos-03",
@@ -125,7 +125,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "cisco_iol",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/cisco-01",
@@ -156,7 +156,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "cisco_iol",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/cisco-02",
@@ -187,7 +187,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/client1",
@@ -230,7 +230,7 @@
       "mgmt-ipv6-prefix-length": 0,
       "mac-address": "",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "linux",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/client2",
@@ -245,13 +245,13 @@
         {
           "host-ip": "",
           "host-port": 0,
-          "port": 443,
+          "port": 80,
           "protocol": "tcp"
         },
         {
           "host-ip": "",
           "host-port": 0,
-          "port": 80,
+          "port": 443,
           "protocol": "tcp"
         }
       ]
@@ -271,9 +271,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "1a:d7:07:00:00:00",
+      "mac-address": "1a:a0:07:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "nokia_srlinux",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/srl-01",
@@ -302,9 +302,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "1a:af:08:00:00:00",
+      "mac-address": "1a:85:08:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "nokia_srlinux",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/srl-02",
@@ -333,9 +333,9 @@
       "mgmt-ipv4-prefix-length": 24,
       "mgmt-ipv6-address": "",
       "mgmt-ipv6-prefix-length": 0,
-      "mac-address": "1a:5d:09:00:00:00",
+      "mac-address": "1a:ac:09:00:00:00",
       "labels": {
-        "clab-mgmt-net-bridge": "br-d7db08a1dcea",
+        "clab-mgmt-net-bridge": "br-e8656297323d",
         "clab-node-group": "",
         "clab-node-kind": "nokia_srlinux",
         "clab-node-lab-dir": "/home/ubuntu/Projects/ansible_telemetry_lab/clab/clab-lab/srl-03",
@@ -356,13 +356,13 @@
         "a": {
           "node": "ceos-01",
           "interface": "eth1",
-          "mac": "aa:c1:ab:6e:28:1f",
+          "mac": "aa:c1:ab:b3:6b:be",
           "peer": "z"
         },
         "z": {
           "node": "ceos-02",
           "interface": "eth1",
-          "mac": "aa:c1:ab:11:f7:60",
+          "mac": "aa:c1:ab:94:aa:bf",
           "peer": "a"
         }
       }
@@ -372,13 +372,13 @@
         "a": {
           "node": "ceos-01",
           "interface": "eth2",
-          "mac": "aa:c1:ab:d7:d6:00",
+          "mac": "aa:c1:ab:96:54:fb",
           "peer": "z"
         },
         "z": {
           "node": "ceos-03",
           "interface": "eth1",
-          "mac": "aa:c1:ab:c3:75:33",
+          "mac": "aa:c1:ab:86:eb:70",
           "peer": "a"
         }
       }
@@ -388,13 +388,13 @@
         "a": {
           "node": "srl-01",
           "interface": "e1-1",
-          "mac": "aa:c1:ab:b0:39:97",
+          "mac": "aa:c1:ab:27:07:5e",
           "peer": "z"
         },
         "z": {
           "node": "srl-02",
           "interface": "e1-1",
-          "mac": "aa:c1:ab:6f:15:2a",
+          "mac": "aa:c1:ab:b1:3f:66",
           "peer": "a"
         }
       }
@@ -404,13 +404,13 @@
         "a": {
           "node": "srl-01",
           "interface": "e1-2",
-          "mac": "aa:c1:ab:12:a5:ff",
+          "mac": "aa:c1:ab:52:82:e9",
           "peer": "z"
         },
         "z": {
           "node": "srl-03",
           "interface": "e1-1",
-          "mac": "aa:c1:ab:de:97:c2",
+          "mac": "aa:c1:ab:79:7e:ed",
           "peer": "a"
         }
       }
@@ -420,13 +420,13 @@
         "a": {
           "node": "cisco-01",
           "interface": "eth1",
-          "mac": "aa:c1:ab:63:f3:f6",
+          "mac": "aa:c1:ab:16:c1:1d",
           "peer": "z"
         },
         "z": {
           "node": "cisco-02",
           "interface": "eth1",
-          "mac": "aa:c1:ab:bd:a2:ef",
+          "mac": "aa:c1:ab:a9:98:19",
           "peer": "a"
         }
       }
@@ -436,13 +436,13 @@
         "a": {
           "node": "cisco-01",
           "interface": "eth2",
-          "mac": "aa:c1:ab:2c:f8:10",
+          "mac": "aa:c1:ab:cb:c6:7b",
           "peer": "z"
         },
         "z": {
           "node": "ceos-01",
           "interface": "eth3",
-          "mac": "aa:c1:ab:52:dc:33",
+          "mac": "aa:c1:ab:b1:14:5a",
           "peer": "a"
         }
       }
@@ -452,13 +452,13 @@
         "a": {
           "node": "cisco-02",
           "interface": "eth2",
-          "mac": "aa:c1:ab:15:51:10",
+          "mac": "aa:c1:ab:5e:f1:70",
           "peer": "z"
         },
         "z": {
           "node": "ceos-02",
           "interface": "eth3",
-          "mac": "aa:c1:ab:dc:36:ee",
+          "mac": "aa:c1:ab:f5:b3:62",
           "peer": "a"
         }
       }
@@ -468,13 +468,13 @@
         "a": {
           "node": "cisco-01",
           "interface": "eth3",
-          "mac": "aa:c1:ab:84:2d:88",
+          "mac": "aa:c1:ab:76:e3:bb",
           "peer": "z"
         },
         "z": {
           "node": "srl-01",
           "interface": "e1-3",
-          "mac": "aa:c1:ab:6e:a0:6a",
+          "mac": "aa:c1:ab:f0:9d:78",
           "peer": "a"
         }
       }
@@ -484,13 +484,13 @@
         "a": {
           "node": "cisco-02",
           "interface": "eth3",
-          "mac": "aa:c1:ab:2e:a5:af",
+          "mac": "aa:c1:ab:b5:68:37",
           "peer": "z"
         },
         "z": {
           "node": "srl-02",
           "interface": "e1-3",
-          "mac": "aa:c1:ab:8b:d8:35",
+          "mac": "aa:c1:ab:5f:1a:ab",
           "peer": "a"
         }
       }

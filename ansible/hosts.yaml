@@ -15,6 +15,10 @@ arista_ceos:
       ansible_host: 192.168.100.12 
     ceos-03:
       ansible_host: 192.168.100.13
+  
+  children:
+    spines:
+    leafs:
 
 cisco_iol:
   hosts:
@@ -37,3 +41,12 @@ network_equipment:
     arista_ceos:
     cisco_iol:
     nokia_srlinux:
+
+spines:
+  hosts:
+    ceos-01:
+
+leafs:  
+  hosts:  
+    ceos-02:
+    ceos-03:
