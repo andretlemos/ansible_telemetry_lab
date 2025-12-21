@@ -4,6 +4,7 @@ clab/**/.config-repo-ar/
 # Ignorar configs geradas automaticamente
 clab/clab-lab/**/config/
 clab/clab-lab/**/flash/
+clab/clab-lab/
 
 # Ignorar arquivos temporários
 *.log

@@ -1,0 +1,15 @@
+#SPDX-License-Identifier: MIT-0
+---
+# tasks file for config_generation
+- name: Create Output Configs Directory
+  ansible.builtin.file:
+    state: directory
+    path: "{{ config_output_root_dir }}"
+  run_once: true
+
+- name: Generate Configurations from Jinja2 Template 
+  ansible.builtin.template:
+    src: "{{ config_template_root_dir }}.j2"
+    dest: "{{ config_output_root_dir }}/{{ inventory_hostname }}.cfg"
+    lstrip_blocks: true
+  

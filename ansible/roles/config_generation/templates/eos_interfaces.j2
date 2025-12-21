@@ -1,0 +1,18 @@
+{% for name, int_details in interfaces.items() %}
+interface {{ name }}
+description {{ int_details['description'] }}
+{% if int_details['ip_address'] is defined %}
+  {% if 'Vlan' in name %}
+ip address virtual {{ int_details['ip_address'] }}
+  {% else %}
+    {% if 'Management' not in name %}
+no switchport
+    {% endif %}
+ip address {{ int_details['ip_address'] }}
+  {% endif %}
+{% endif %}
+{% if int_details['vlan'] is defined %}
+switchport access vlan {{ int_details['vlan'] }}
+{% endif %}
+!
+{% endfor %}

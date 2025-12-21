@@ -26,11 +26,11 @@ topology:
     ceos-03:
       kind: arista_ceos
       mgmt-ipv4: 192.168.100.13
-    cisco-01:
-      kind: cisco_iol
+    core-01:
+      kind: nokia_srlinux
       mgmt-ipv4: 192.168.100.21
-    cisco-02:
-      kind: cisco_iol
+    core-02:
+      kind: nokia_srlinux
       mgmt-ipv4: 192.168.100.22
     srl-01:
       kind: nokia_srlinux
@@ -54,8 +54,14 @@ topology:
     - endpoints: ["srl-01:e1-1", "srl-02:e1-1"]
     - endpoints: ["srl-01:e1-2", "srl-03:e1-1"]
     # Cisco IOL connections
-    - endpoints: ["cisco-01:eth1", "cisco-02:eth1"]
-    - endpoints: ["cisco-01:eth2", "ceos-01:eth3"]
-    - endpoints: ["cisco-02:eth2", "ceos-02:eth3"]
-    - endpoints: ["cisco-01:eth3", "srl-01:e1-3"]
-    - endpoints: ["cisco-02:eth3", "srl-02:e1-3"]
+    #- endpoints: ["cisco-01:eth1", "cisco-02:eth1"]
+    #- endpoints: ["cisco-01:eth2", "ceos-01:eth3"]
+    #- endpoints: ["cisco-02:eth2", "ceos-02:eth3"]
+    #- endpoints: ["cisco-01:eth3", "srl-01:e1-3"]
+    #- endpoints: ["cisco-02:eth3", "srl-02:e1-3"]
+    # CORE Connections
+    - endpoints: ["core-01:e1-1", "core-02:e1-1"]
+    - endpoints: ["core-01:e1-2", "ceos-01:eth3"]
+    - endpoints: ["core-02:e1-2", "ceos-02:eth3"]
+    - endpoints: ["core-01:e1-3", "srl-01:e1-3"]
+    - endpoints: ["core-02:e1-3", "srl-02:e1-3"]

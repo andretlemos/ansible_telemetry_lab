@@ -1,0 +1,9 @@
+---
+
+- name: Build Configs for Arista 
+  hosts: arista_ceos
+  gather_facts: false
+  connection: local
+  roles:
+    - config_generation
+    

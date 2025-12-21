@@ -1,0 +1,7 @@
+{% include "./eos_interfaces.j2" %}
+{% include "./eos_bgp.j2" %}
+{% include "./eos_underlay_policy.j2" %}
+
+{% if inventory_hostname in groups['leafs'] %}
+{% include "./eos_vxlan_interface.j2" %}
+{% endif %}

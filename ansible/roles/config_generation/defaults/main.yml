@@ -1,0 +1,5 @@
+#SPDX-License-Identifier: MIT-0
+---
+# defaults file for config_generation
+config_template_root_dir: "templates/{{ ansible_network_os | split('.') | last }}"
+config_output_root_dir: "{{ global_output_root_dir | default ('output/config') }}"

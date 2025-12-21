@@ -20,11 +20,11 @@ arista_ceos:
     spines:
     leafs:
 
-cisco_iol:
+core:
   hosts:
-    cisco-01:
+    core-01:
       ansible_host: 192.168.100.21 
-    cisco-02:
+    core-02:
       ansible_host: 192.168.100.22
 
 nokia_srlinux:
@@ -39,7 +39,7 @@ nokia_srlinux:
 network_equipment: 
   children:
     arista_ceos:
-    cisco_iol:
+    core:
     nokia_srlinux:
 
 spines:

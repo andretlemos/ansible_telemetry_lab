@@ -3,7 +3,7 @@
 - name: Validate Collection is working
   gather_facts: false
   connection: ansible.netcommon.network_cli
-  hosts: "ceos-01"
+  hosts: arista_ceos
   tasks:
     - name: Run a command on ARISTA EOS
       arista.eos.eos_command:
@@ -12,4 +12,4 @@
 
     - name: Display the EOS output 
       debug:
-        var: eos_output.stdout_lines
+        var: eos_output
