@@ -1,9 +1,12 @@
 ---
-
-- name: Build Configs for Arista 
-  hosts: arista_ceos
-  gather_facts: false
-  connection: local
+- name: "BUILD CONFIGS FOR ARISTA"
+  hosts: "arista_ceos"
+  connection: "local"
   roles:
-    - config_generation
-    
+    - "config_generation"
+  tasks:
+    - name: "DEPLOY ADVANCED CONFIG"
+      arista.eos.eos_config:
+        src: "/home/ubuntu/Projects/ansible_telemetry_lab/ansible/output/config/{{ inventory_hostname }}.cfg"             
+        save_when: changed
+        

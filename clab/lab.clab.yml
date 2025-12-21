@@ -20,12 +20,15 @@ topology:
     ceos-01:
       kind: arista_ceos
       mgmt-ipv4: 192.168.100.11
+      startup-config: configs/ceos-01.cfg
     ceos-02:
       kind: arista_ceos
       mgmt-ipv4: 192.168.100.12
+      startup-config: configs/ceos-02.cfg
     ceos-03:
       kind: arista_ceos
       mgmt-ipv4: 192.168.100.13
+      startup-config: configs/ceos-03.cfg
     core-01:
       kind: nokia_srlinux
       mgmt-ipv4: 192.168.100.21
@@ -34,34 +37,44 @@ topology:
       mgmt-ipv4: 192.168.100.22
     srl-01:
       kind: nokia_srlinux
+      type: ixr-d3
       mgmt-ipv4: 192.168.100.31
     srl-02:
       kind: nokia_srlinux
+      type: ixr-d3
       mgmt-ipv4: 192.168.100.32
     srl-03:
       kind: nokia_srlinux
+      type: ixr-d2
       mgmt-ipv4: 192.168.100.33
     client1:
       kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:00:01 dev eth1
+        - ip addr add 192.168.0.1/24 dev eth1
+        - ip route add 192.168.20.0/24 via 192.168.0.254
     client2:
       kind: linux
+      exec:
+        - ip link set address 00:c1:ab:00:00:02 dev eth1
+        - ip addr add 192.168.20.1/24 dev eth1
+        - ip route add 192.168.0.0/24 via 192.168.20.254
 
   links:
     # Arista connections
-    - endpoints: ["ceos-01:eth1", "ceos-02:eth1"]
-    - endpoints: ["ceos-01:eth2", "ceos-03:eth1"]   
+    - endpoints: ["ceos-01:eth3", "ceos-02:eth1"]
+    - endpoints: ["ceos-01:eth4", "ceos-03:eth1"]   
     # SR Linux connections
-    - endpoints: ["srl-01:e1-1", "srl-02:e1-1"]
-    - endpoints: ["srl-01:e1-2", "srl-03:e1-1"]
-    # Cisco IOL connections
-    #- endpoints: ["cisco-01:eth1", "cisco-02:eth1"]
-    #- endpoints: ["cisco-01:eth2", "ceos-01:eth3"]
-    #- endpoints: ["cisco-02:eth2", "ceos-02:eth3"]
-    #- endpoints: ["cisco-01:eth3", "srl-01:e1-3"]
-    #- endpoints: ["cisco-02:eth3", "srl-02:e1-3"]
+    - endpoints: ["srl-01:e1-3", "srl-02:e1-1"]
+    - endpoints: ["srl-01:e1-4", "srl-03:e1-1"]
+  
     # CORE Connections
-    - endpoints: ["core-01:e1-1", "core-02:e1-1"]
-    - endpoints: ["core-01:e1-2", "ceos-01:eth3"]
-    - endpoints: ["core-02:e1-2", "ceos-02:eth3"]
-    - endpoints: ["core-01:e1-3", "srl-01:e1-3"]
-    - endpoints: ["core-02:e1-3", "srl-02:e1-3"]
+    - endpoints: ["core-01:e1-1", "srl-01:e1-1"]
+    - endpoints: ["core-01:e1-2", "ceos-01:eth1"]
+    - endpoints: ["core-01:e1-3", "core-02:e1-3"]
+    - endpoints: ["core-02:e1-2", "ceos-01:eth2"]
+    - endpoints: ["core-02:e1-1", "srl-01:e1-2"]
+  
+    # Server Links
+    - endpoints: ["client1:eth1", "srl-02:e1-2"]
+    - endpoints: ["client2:eth1", "ceos-02:eth2"]
